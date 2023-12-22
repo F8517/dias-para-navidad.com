@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: subpixel-antialiased; /* Use subpixel antialiasing */
+  -moz-osx-font-smoothing: subpixel-antialiased;
+  background: linear-gradient(to bottom, #201853, #2A6EB5); /* Linear gradient background */
+  margin: 0; /* Remove default body margin */
+  height: 100vh; /* Set full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initial opacity set to 0 for fade-in effect */
+  animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-font {
+  font-family: 'H2Font', Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased; /* Use subpixel antialiasing */
+}
+
+#countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* 20px top margin */
+  opacity: 0; /* Initial opacity set to 0 for fade-in effect */
+  animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+#countdown {
+  font-size: 3em; /* 1.5 times bigger */
+  color: #000; /* Counter text color set to black */
+  background-color: #fff; /* Counter background color set to white */
+  border-radius: 50%;
+  width: 120px; /* Adjust the size accordingly */
+  height: 120px;
+  line-height: 120px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: 'CounterFont', Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased; /* Use subpixel antialiasing */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Added text shadow to counter text */
+  animation: heartbeat 2.56s infinite; /* Heartbeat animation */
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #fff; /* H2 text color set to white */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Added text shadow to H2 */
+}
+
+a {
+  color: #fff; /* Anchor text color set to white */
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+  margin: 20px 0 0; /* 20px top margin */
+  font-family: 'H2Font', Arial, sans-serif; /* Use the same font as H2 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Added text shadow to anchor text */
+  animation: fadeIn 2s forwards; /* Fade-in animation for anchors */
+  padding: 5px 10px; /* Padding added for a clickable area */
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Adjusted to be less exaggerated */
+  }
+}
+
+/* Default styles for all devices */
+
+/* For Desktop */
+@media (min-width: 1024px) {
+h1, h2, h3, h4, h5, h6, p {
+font-size: 175%;
+ }
+}
